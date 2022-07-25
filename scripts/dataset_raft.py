@@ -5,10 +5,10 @@ from concurrent import futures
 
 BASE_DIR = os.path.abspath("__file__/..")
 ROOT_DIR = os.path.dirname(BASE_DIR)
+# ROOT_DIR=='/ssd/jaesungchoe/deformable-sprites'
 
 import sys
-
-sys.path.append(os.path.join(ROOT_DIR, "src"))
+sys.path.append(ROOT_DIR)
 from data import get_data_subdir, match_custom_seq
 
 
@@ -37,12 +37,12 @@ def process_sequence(gpu, dtype, root, seq, gap, res="480p", batch_size=4):
 
 
 def main(args):
-    print("Have you updated the path to the RAFT repo? (y/n)")
-    resp = input()
-    if resp.lower() != "y":
-        print("Please modify scripts/run_raft.py")
-        sys.exit()
-    print("Comment this out in scripts/run_raft.py")
+    # print("Have you updated the path to the RAFT repo? (y/n)")
+    # resp = input()
+    # if resp.lower() != "y":
+    #     print("Please modify scripts/run_raft.py")
+    #     sys.exit()
+    # print("Comment this out in scripts/run_raft.py")
 
     if args.root is None:
         print("Have you updated the paths to your data? (y/n)")
