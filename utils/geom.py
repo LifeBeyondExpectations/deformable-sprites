@@ -25,8 +25,7 @@ def get_uv_grid(H, W, homo=False, align_corners=False, device=None):
     yy, xx = torch.meshgrid(
         torch.arange(H, dtype=torch.float32, device=device),
         torch.arange(W, dtype=torch.float32, device=device),
-        indexing="ij",
-    )
+    ) # indexing="ij",
     if align_corners:
         xx = 2 * xx / (W - 1) - 1
         yy = 2 * yy / (H - 1) - 1
