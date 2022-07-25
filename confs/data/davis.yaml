@@ -1,4 +1,4 @@
-root: "/path/to/DAVIS"
+root: "/ssd/jaesungchoe/dataset/davis/2016/DAVIS/"
 type: "davis"
 res: "480p"
 seq: "dog"
